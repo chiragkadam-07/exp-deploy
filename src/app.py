@@ -3,13 +3,16 @@ import dash_bootstrap_components as dbc
 import pandas as pd
 import numpy as np
 import plotly.express as px
+import os
 # import time
 # from dash_bootstrap_templates import load_figure_template
 # load_figure_template('DARKLY')
 
 # start = time.time()
 
-df = pd.read_csv("C:/Users/sahil/Downloads/New folder/Los_Angeles_subset.csv")
+# df = pd.read_csv("C:/Users/sahil/Downloads/New folder/Los_Angeles_subset.csv")
+file_path = os.path.join(os.path.dirname(__file__), "Los_Angeles_subset.csv")
+df = pd.read_csv(file_path)
 colorscales = px.colors.named_colorscales()
 bar_colors = px.colors.qualitative.Plotly
 
